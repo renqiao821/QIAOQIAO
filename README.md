@@ -14,13 +14,33 @@
 | `src/` | 主要代码 |
 | `scripts/` | 辅助脚本与工具 |
 
-> 目录会在有实际内容时逐步建立，当前仅有本说明文件。
+项目采用 `src` 布局：
+
+```
+src/qiaoqiao/     包源码
+tests/            单元测试
+pyproject.toml    项目配置
+```
 
 ## 使用方式
 
 ```bash
 git clone git@github.com:renqiao821/QIAOQIAO.git
 cd QIAOQIAO
+python -m pip install -e .
+qiaoqiao
+```
+
+不安装也可以直接运行：
+
+```bash
+python -m qiaoqiao        # 需先设置 PYTHONPATH=src
+```
+
+运行测试：
+
+```bash
+python -m unittest discover -s tests -v
 ```
 
 ## 许可
